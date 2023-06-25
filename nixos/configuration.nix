@@ -119,18 +119,19 @@
   home-manager.users.eragon = import /home/eragon/.config/nixpkgs/home.nix;
   # Cleaning up
   environment.gnome.excludePackages = with pkgs.gnome; [
-    baobab      # disk usage analyzer
     cheese      # photo booth
-    #eog         # image viewer
     epiphany    # web browser
     gedit       # text editor
     simple-scan # document scanner
     totem       # video player
     yelp        # help viewer
-    #evince      # document viewer
-    #file-roller # archive manager
     geary       # email client
     seahorse    # password manager
+    
+    #eog         # image viewer
+    #evince      # document viewer
+    #file-roller # archive manager
+    # baobab      # disk usage analyzer
 
     # gnome stuff
     # gnome-calculator gnome-screenshot gnome-disk-utility
