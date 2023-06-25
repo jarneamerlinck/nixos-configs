@@ -17,6 +17,8 @@ mkdir -p .config/nixpkgs;
 
 curl https://raw.githubusercontent.com/jarneamerlinck/nixos-configs/main/home.nix > .config/nixpkgs/home.nix
 
+cp /etc/nixos/configuration.nix /etc/nixos/configuration.nix.preinstall
 
+curl https://raw.githubusercontent.com/jarneamerlinck/nixos-configs/main/nixos/configuration.nix > /etc/nixos/configuration.nix
 # rebuild and check configs
 nixos-rebuild switch
