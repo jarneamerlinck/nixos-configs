@@ -91,6 +91,7 @@
       home-manager
       wpgtk
       gh
+      conda
 
 # GUI Apps
     #basic
@@ -116,6 +117,39 @@
 
   home-manager.useUserPackages = true;
   home-manager.users.eragon = import /home/eragon/.config/nixpkgs/home.nix;
+  # Cleaning up
+  environment.gnome.excludePackages = with pkgs.gnome; [
+    baobab      # disk usage analyzer
+    cheese      # photo booth
+    #eog         # image viewer
+    epiphany    # web browser
+    gedit       # text editor
+    simple-scan # document scanner
+    totem       # video player
+    yelp        # help viewer
+    #evince      # document viewer
+    #file-roller # archive manager
+    geary       # email client
+    seahorse    # password manager
+
+    # gnome stuff
+    # gnome-calculator gnome-screenshot gnome-disk-utility
+    gnome-calendar
+    gnome-characters
+    gnome-clocks
+    gnome-contacts
+    gnome-font-viewer
+    gnome-logs
+    gnome-maps
+    gnome-music
+    pkgs.gnome-photos
+    gnome-system-monitor
+    gnome-weather 
+    pkgs.gnome-connections
+  ];
+
+
+
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "eragon";
