@@ -92,6 +92,7 @@
       wpgtk
       gh
       conda
+      kitty
 
 # GUI Apps
     #basic

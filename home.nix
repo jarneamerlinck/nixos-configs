@@ -6,13 +6,13 @@
    # home.packages = [vscode ];
     programs.bash.enable = true;
     programs.vscode = {
-    enable = true;
-    extensions = with pkgs.vscode-extensions; [
-        dracula-theme.theme-dracula
-        vscodevim.vim
-        yzhang.markdown-all-in-one
-  ];
-};
+        enable = true;
+        extensions = with pkgs.vscode-extensions; [
+            dracula-theme.theme-dracula
+            vscodevim.vim
+            yzhang.markdown-all-in-one
+            ];
+    };
     gtk = {
         enable = true;
         font.name = "Victor Mono SemiBold 12";
@@ -20,5 +20,10 @@
             name = "Pop-Dark";
             package = pkgs.pop-gtk-theme;
         };
-};
+    };
+    home.sessionVariables = {
+        EDITOR = "vim";
+        BROWSER = "firefox";
+        TERMINAL = "kitty";
+  };
 }
